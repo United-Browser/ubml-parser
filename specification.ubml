@@ -1,0 +1,73 @@
+=ubml 0.1
+
+=title United Browser Markup Language Specification
+
+=description The official language specification of the United Browser Markup Language.
+
+=markdown
+# UBML Syntax Specification 0.1
+This page describes the entire language specification of Simple Markup Language (UBML).
+UBML files describe pages without nesting, sequentially. Their structure is more like 
+Markdown than HTML. In fact, UBML [supports basic markdown syntax](ntd://owfw92hje8j2f3).
+
+UBML files contain *elements* that are designated with an equals sign (`=`) followed by 
+the name of the element. For example, the text you're reading now is part of a `=markdown` 
+element.
+
+=markdown
+# List of elements
+| Syntax         | Description                     | Parameters                         | Example              
+| -----------    | -----------------               | -------------------------          | ------------------      
+| =UBML          | UBML page declaration/version   | [Version number]                   | =UBML 0.1
+| =title         | Title of the UBML page          | [Title of the page]                | =title My page title
+| =description   | Description of the UBML page    | [Description of the page]          | =description The page its description
+| =index         | An index to position the page   | [Index of the page]                | =index ntd://smfw2f923jf81
+| =text          | Basic text block                | [Content]                          | =text My [**text link**](pttp://dfge434)
+| =head1         | Basic header                    | [Heading 1]                        | =head1 The largest heading
+| =head2         | Basic header                    | [Heading 2]                        | =head2 A large heading
+| =head3         | Basic header                    | [Heading 3]                        | =head3 A medium heading
+| =head4         | Basic header                    | [Heading 4]                        | =head4 A small heading
+| =head5         | Basic header                    | [Heading 5]                        | =head5 The smallest heading
+| =list          | Basic list                      | [[List item]]                      | =list - Item one
+| =list          | Basic list                      | [[List item]]                      | =list 1. Item one
+| =quote         | Like =text, but as blockquote   | [[Quoted content]]                 | =quote Carpe diem
+| =rule          | A horizontal rule               | None                               | =rule
+| =markdown      | Markdown                        | [Markdown content]                 | =markdown # A Markdown Title
+| =code          | A code block                    | [:lang=?] [Code content]           | =code:lang=js console.log('Hello World')
+| =image         | Image (slideshow)               | [[ntd address] [image caption]]    | =image ntd://smfw2f923jf80 It's me!
+| =video         | Video (playlist)                | [[ntd address] [video caption]]    | =video ntd://smfw2f923jf81 A cat
+| =audio         | Audio (playlist)                | [[ntd address] [audio caption]]    | =audio ntd://smfw2f923jf82 A song
+| =app           | A WASM Application              | [ntd address] [app-parameters]     | =app ntd://smfw2f923jf83 arg1=value
+| =embed         | Embed element from another page | [[ntd address] [#item]]            | =embed ntd://smfw2f923jf83 0
+| =embed:element | Embed element from another page | [[ntd address] [#item]             | =embed:image ntd://smfw2f923jf83 0
+| =//            | A comment                       | [Comment]                          | =// This text will not be rendered.
+| \=             | Escape element syntax           | None                               | \=image will show `=image` as text.
+
+Elements may span multiple lines. For elements where multiple parameters can be passed such as `=image`, `=video`, `=audio` and `=embed`, each item can be put on a new line. 
+
+=code:lang=php
+<?php 
+    echo "Hello World"
+?>
+
+=code:lang=UBML
+
+    =index ntd://smfw2f923jf80
+
+    =markdown
+    This is some **Markdown** text that
+    spans multiple lines. You may use 
+    indentations, but you never need to.
+
+    =image
+    ntd://smfw2f923jf80 The first of multiple images
+    ntd://smfw2f923jf80 The second of multiple images
+    ntd://smfw2f923jf80 These images will result in a slideshow in United
+
+
+=markdown
+For more examples, see the example UBML file below.
+
+## Example of a UBML file
+
+=embed ntd://spsdfkjasd9u2jhi2fe29f2ef0
