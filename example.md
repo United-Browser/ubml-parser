@@ -50,6 +50,5 @@ This is a markdown section.
 
 ![ntd://0ks45h346x9dsj900jf](ntd://0ks45h346x9dsj900jf)
 
-<!--With =ref you can include another UBML page or a section of it. United will automatically 
-add a footnote with a link to the source.-->
+<!--End of file.-->
 
