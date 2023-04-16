@@ -1,8 +1,8 @@
-import { MediaElement, UbmlElement } from "./element";
+import { UbmlElement, MediaElement } from "./element";
 
-export class Image extends UbmlElement {
-
-    parseLine(line: string) : MediaElement {
+export class Video extends UbmlElement {
+    
+    parseLine(line: string): MediaElement {
         const parts: string[] = line.split(/(?<=^\S+)\s/);
         return {
             source: parts[0],

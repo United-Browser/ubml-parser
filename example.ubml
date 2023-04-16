@@ -1,10 +1,13 @@
+=path some example path with/a slash
 =title Title of the document
 =description A description of the document
 
 =// This is a comment. It is only visible in this file and not rendered by United.
 
-=head1 An example SML file
-=head2 A subtitle
+=h1 An example UBML file
+=h2 A subtitle
+
+=rule
 
 =text
 This is a paragraph. It offers basic basic markdown syntax. What you write is what you get. 
@@ -38,8 +41,7 @@ ntd://0ks45h346x9dsj900jf?lang=nl This is the first audio file in a playlist
 ntd://0ks45h346x9dsj900jf?lang=nl This is the second audio file in a playlist
 
 =embed ntd://0ks45h346x9dsj900jf 0
+=embed ntd://0ks45h346x9dsj900jf
 =embed:text ntd://0ks45h346x9dsj900jf 0
 
-=// 
-With =ref you can include another SML page or a section of it. United will automatically 
-add a footnote with a link to the source.
+=// End of file.

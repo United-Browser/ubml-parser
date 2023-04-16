@@ -1,6 +1,10 @@
 import { UbmlElement } from "./element";
 
-export class Text extends UbmlElement {
+export class Rule extends UbmlElement {
+
+    constructor() {
+        super('');
+    }
 
     parse(): string {
         return this.ubml.trim();

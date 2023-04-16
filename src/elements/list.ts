@@ -1,8 +1,8 @@
 import { UbmlElement } from "./element";
 
-export class Comment extends UbmlElement {
+export class List extends UbmlElement {
 
-    parse() {
+    parse(): string {
         return this.ubml.trim();
     }
 }
